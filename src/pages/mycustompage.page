@@ -1,0 +1,5 @@
+<apex:page controller="mycustomcontroller" >
+    <apex:pageblock title="hello {!$User.FirstName}">
+        This is your page for the {!name} controller
+    </apex:pageblock>
+</apex:page>

@@ -1,0 +1,23 @@
+<apex:page standardcontroller="account" renderAs="pdf">
+    <apex:pageblock title="account summary">
+        <apex:pageblocksection >
+            <apex:outputfield value="{!account.name}"/>
+            <apex:outputfield value="{!account.phone}"/>
+            <apex:outputfield value="{!account.industry}"/>
+            <apex:outputfield value="{!account.annualrevenue}"/>
+        </apex:pageblocksection>
+    </apex:pageblock>
+    <apex:pageblock >
+        <apex:pageblocktable value="{!account.contacts}" var="con"> <!--just like for loop ,here the value returns by 
+																	account.contact is given to con variable and that variable
+																	will fetch its corresponding name,phone and tittle 
+																	,just like indexing in the for loop -->
+            
+            <apex:column value="{!con.name}"/>
+            <apex:column value="{!con.phone}"/>
+            <apex:column value="{!con.title}"/>
+            
+        </apex:pageblocktable>
+    </apex:pageblock>
+    
+</apex:page>

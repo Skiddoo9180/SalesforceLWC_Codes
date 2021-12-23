@@ -1,0 +1,25 @@
+<apex:page controller="accountwrappercontroller" sidebar="true" >
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Show selected account" action="{!processselected}" rerender="table2"/>
+            </apex:pageblockbuttons>
+            <apex:pageblocksection title="all accounts" collapsible="TRUE" columns="2">
+                
+                <apex:pageblocktable value="{!wrapaccountlist}" var="accwrap" id="table" title="all accounts">
+                    <apex:column >
+                        <apex:inputcheckbox value="{!accwrap.selected}" id="inputid"/>
+                    </apex:column>
+                    <apex:column value="{!accwrap.acc.name}"/>
+                    <apex:column value="{!accwrap.acc.billingcity}"/>
+                    <apex:column value="{!accwrap.acc.phone}"/>
+                </apex:pageblocktable>   
+                <apex:pageblocktable value="{!selectedaccounts}" var="c" id="table2" title="selected accounts">
+                    <apex:column value="{!c.name}" headervalue="account name" /> 
+                    <!-- Header value is used to give the column heading but if we dont give then also it will take the coresponding value from the list-->
+                    <apex:column value="{!c.billingcity}" headervalue="billing city"/>
+                </apex:pageblocktable>
+            </apex:pageblocksection> 
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

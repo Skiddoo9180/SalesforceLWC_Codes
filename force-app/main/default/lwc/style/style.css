@@ -1,0 +1,12 @@
+.sfdcfacts-card{
+    padding:1rem;
+    background:gold;
+    border-radius:4px;
+    margin:.5rem;
+}
+.sfdcfacts-card:hover{
+    padding:1rem;
+    background:gold;
+    border-radius:4px;
+    margin:.5rem;
+}

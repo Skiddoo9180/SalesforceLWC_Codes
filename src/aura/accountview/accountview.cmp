@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="account_v" type="account[]"/>
+    <aura:attribute name="colstodisplay" type="list"/>
+    <aura:attribute name="searchfinder" type="string"/>
+    
+    <!--method to call an component initialixzation-->
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+          
+    <lightning:card iconname="standard account" title="accountlist">
+    
+        <!--search box-->
+        
+    <lightning:layout>
+       <lightning:layoutItem size="3" padding="around-small">
+        <lightning:input aura:id="searchfield"
+                         label="account Name"
+                         value="{!v.searchfinder}"
+                         placeholder="search account"
+                         onchange="{!c.searchaccount}"/>
+        </lightning:layoutItem>
+        </lightning:layout>
+    <!---Displaable account list-->
+        <lightning:datatable data="{!v.lstaccount}"
+                             columns="{!v.columnstodisplay}"
+                             key-field="Id"/>
+
+        
+    </lightning:card>
+</aura:component>

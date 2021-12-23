@@ -1,0 +1,11 @@
+<apex:page standardcontroller="account">
+   <!-- <apex:pageblock title="Account Summary">
+        <apex:pageblocksection >
+            Name:{!account.name} <br/>
+            Phone:{!account.Phone} <br/>
+            Industry:{!account.Industry} <br/>            
+        </apex:pageblocksection>
+    </apex:pageblock> -->
+    <apex:detail relatedlist="false" /> <!--All the related details for the mentioned id -->
+    <apex:relatedlist list="opportunities" pagesize="1"/>
+</apex:page>

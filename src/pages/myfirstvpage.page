@@ -1,0 +1,21 @@
+<apex:page >
+    <h1>
+        Welcome
+    </h1>
+    <!--<p>
+
+Wipro Limited
+
+</p>-->
+    <apex:pageblock title="my page block">
+        lets learn visual force
+        <apex:pageblocksection title="sfdc developer">
+            {!$User.FirstName& ' ' &$User.LastName}
+            {!$Organization.Country}<br/>
+            {!2^10}<br/>
+            {!TODAY()+7}<br/>
+            {!if(contains('salesforce.com','com'),'yup','nope')}<br/>
+            <apex:outputlink value="{!URLFOR($Action.Account.New)}"> create new account<br/> </apex:outputlink>
+        </apex:pageblocksection>
+    </apex:pageblock>
+</apex:page>

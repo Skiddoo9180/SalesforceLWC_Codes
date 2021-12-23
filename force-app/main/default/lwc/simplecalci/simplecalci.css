@@ -1,0 +1,11 @@
+.clar{
+    background: blueviolet;
+    text-emphasis-color: Red;
+    color:green;
+}
+div{
+    border:3px solid blueviolet;
+}
+:host{
+    border:5px solid mediumblue;
+}

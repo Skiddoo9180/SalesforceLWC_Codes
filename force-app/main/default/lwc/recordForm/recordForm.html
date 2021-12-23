@@ -1,0 +1,59 @@
+<template>
+    <lightning-card title="Create record using lightning-record-form">
+        <lightning-record-form
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+        > 
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Display Record using lightning-record-form">
+        <lightning-record-form
+            record-id="0015g00000apVhnAAE"
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+        > 
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Display Record in read only mode using lightning-record-form">
+        <lightning-record-form
+            record-id="0015g00000apVhnAAE"
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+            mode="readonly"
+        > 
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Edit record using lightning-record-form">
+        <lightning-record-form
+            record-id="0015g00000apVhnAAE"
+            object-api-name={objectName}
+            fields={fieldList}
+            onsuccess={successHandler}
+            mode="edit"
+            columns="3"
+        > 
+        </lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Edit record with layout using lightning-record-form">
+        <lightning-record-form
+        record-id="0015g00000apVhnAAE"
+        object-api-name={objectName}
+        mode="edit"
+        columns="3"
+        layout-type="Compact"
+        ></lightning-record-form>
+    </lightning-card>
+    <lightning-card title="Edit record with Full layout using lightning-record-form">
+        <lightning-record-form
+        record-id="0015g00000apVhnAAE"
+        object-api-name={objectName}
+        mode="edit"
+        columns="3"
+        layout-type="Full"
+        ></lightning-record-form>
+    </lightning-card>
+
+</template>

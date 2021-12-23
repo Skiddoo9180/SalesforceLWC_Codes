@@ -1,0 +1,4 @@
+<aura:component controller="simpleserversidecontroller">
+    <aura:attribute name="firstname" type="String" default="KUMAR"/>
+    <lightning:button label="call server" onclick="{!c.echo}"/>
+</aura:component>

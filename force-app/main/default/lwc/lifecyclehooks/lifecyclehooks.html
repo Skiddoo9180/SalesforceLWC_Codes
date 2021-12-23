@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent lwc">
+        <template if:false={bool}><lightning-button label="showchild" brand="variant" onclick={clickhandler}></lightning-button></template>
+        <template if:true={bool}><lightning-button label="notshowchild" brand="variant" onclick={noclickhandler}></lightning-button></template>
+        <template if:true={bool}>
+            <c-lifecyclehookschild></c-lifecyclehookschild>
+        </template>
+        <p>{value}</p>
+        <h2 class="slds-text-heading_medium slds-var-m-bottom_medium">Chosse your options</h2>
+        <lightning-button variant="destructive" label="signup" title="signup" onclick={handleclick} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="success" label="signin" value="signin" title="signin" onclick={handleclick} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

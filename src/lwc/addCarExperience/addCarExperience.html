@@ -1,0 +1,13 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small">
+            <lightning-input label="Title" onchange={titlechangehandler}></lightning-input>
+        </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-input label="Description" onchnage={descriptionchangehandler}></lightning-input>
+            </lightning-layout-item>
+                <lightning-layout-item size="12" padding="around-small">
+                    <lightning-button class="slds-m-top_small" variant="brand" label="Add Experience" value="addexperience" onclick={addexphandler}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

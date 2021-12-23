@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="MY Account Manager">
+        <lightning-layout>
+            <lightning-layout-item>
+<!--<lightning-record-form object-api-name="Account" record-id={recordid} columns="2" fields={fieldarray}
+                    mode="edit" onsuccess={successhandler} layout-type="Full"></lightning-record-form> -->
+                    <lightning-record-form object-api-name="Account" record-id={recordid} fields={fieldarray}
+                    mode="edit" onsuccess={successhandler} layout-type="Full"></lightning-record-form>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

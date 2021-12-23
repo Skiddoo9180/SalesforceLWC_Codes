@@ -1,0 +1,6 @@
+<apex:page controller="Myfirstcontroller">
+    <apex:pageblock title=" Hi {!$User.FirstName} is the admin of this visual force page"><br/>
+        Hello guest {!name}<br/>
+        Are you here to check the position{!position.name } having salary{!position.Salary__c}<br/>
+    </apex:pageblock>
+</apex:page>

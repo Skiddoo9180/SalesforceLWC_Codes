@@ -1,0 +1,16 @@
+<apex:page standardcontroller="Position__c">
+    <h1>
+        Add positions
+    </h1>
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:pagemessage severity="info" strength="3" summary="please enter the name"></apex:pagemessage>
+            <apex:pageblock >
+                <apex:inputfield value="{!Position__c.name}"/>
+                <apex:inputfield value="{!Position__c.Salary__c}"/>
+                <apex:commandButton value="Submit" action="{!save}"/>
+            </apex:pageblock>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="insertposition" extensions="Positionextension">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocksection >
+            <apex:inputfield value="{!pos.name}"></apex:inputfield> <br/><!--Input fields take value from the webpage-->
+            <apex:inputfield value="{!pos.Salary__c}"></apex:inputfield>
+            <apex:commandbutton value="save" action="{!save}">
+            {!greeting}
+            </apex:commandbutton>
+        </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

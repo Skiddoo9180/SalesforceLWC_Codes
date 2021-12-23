@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="satyam calculator" icon-name="standard:formula">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-input type="number" name="firstnumber" onchange={numberchangehandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="medium">
+                <lightning-input type="number" name="secondnumber" onchange={numberchangehandler}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding ="around-medium">
+                <lightning-button-group>
+                    <lightning-button label="add" icon-name="utility:add" icon-position="right" onclick={addhandler}></lightning-button>
+                </lightning-button-group>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+                <lightning-formatted-text value ={currentresult}></lightning-formatted-text>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium">
+               <lightning-input type="checkbox" onchange={showpreviousresult}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-medium"></lightning-layout-item>
+            <template if:true={showresult}>
+                <ul>
+                    <template iterator:result={previousresult}>
+                        <li key={result.value}>
+                            <div if:true={result.first} class="slds-border_top"></div>
+                            <lightning-formatted-text value={result.value}></lightning-formatted-text>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+</template>

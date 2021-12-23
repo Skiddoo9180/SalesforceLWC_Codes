@@ -1,0 +1,14 @@
+<apex:page controller="namesset" >
+    <apex:form >
+        <apex:pageblock >
+            <apex:pageblocksection title="This is a name set method" collapsible="false">
+                <apex:inputtext value="{!name}"/>
+                <apex:commandButton value="click" rerender="One"/>
+                <div>
+                    <apex:outputtext id="one" value="Your name is {!name}"></apex:outputtext>
+                    <!-- here id =one is the part of page that has been rendered and that id shows our name-->
+                </div>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

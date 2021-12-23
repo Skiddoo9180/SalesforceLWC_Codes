@@ -1,0 +1,17 @@
+<template>
+    <lightning-card  title="This is a parent Element">
+        <div class="slds-var-m-around_medium">
+            <c-learning-slots-child>
+                <p class="slds-text-color_success" slot="first">My name is satyam</p>
+                <p class="slds-text-color_error" slot="second">My age is 23</p>
+                <p slot="footer"> I am footer</p>
+            </c-learning-slots-child>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <c-learning-slots-child>
+                <p class="slds-text-color_success" slot="first">My name is satyam</p>
+                <p class="slds-text-color_error" slot="second">My age is 23</p>
+            </c-learning-slots-child>
+        </div>
+    </lightning-card>
+</template>

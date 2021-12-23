@@ -1,0 +1,11 @@
+<template>
+    <template if:true={showroom}>
+    <div class="slds-p-around_medium lgc-bg" onclick={tileclickhandler}>
+        <lightning-tile label={meetingroominfo.roomname} href="/path/to/somewhere">
+            <p class="slds-truncate" title={meetingroominfo.roomno}>room capacity:
+                 {meetingroominfo.roomno}</p>
+        </lightning-tile>
+    </div>
+</template>
+</template>
+

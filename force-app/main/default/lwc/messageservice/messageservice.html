@@ -1,0 +1,25 @@
+<template>
+<lightning-card title="messaging service">
+    <template for:each={messages} for:item="message">
+        <div key={message.id} class="message">
+            {message.from} >{message.value}
+        </div>
+    </template>
+    <div class="slds-p-around-medium">
+        <lightning-layout>
+            <lightning-layout-item size="7" class="slds-p-around-medium">
+                <lightning-input type="text" variant="label-hidden">
+                </lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+        </div>
+        <div class="sld-p-around-medium">
+            <lightning-layout-item size="8" class="slds-m-right-medium">
+                <lightning-button label="send" icon-name="utility:send" variant="brand" onclick={sendhandler}>
+
+                </lightning-button>
+            </lightning-layout-item>
+        </div>
+   
+</lightning-card>    
+</template>

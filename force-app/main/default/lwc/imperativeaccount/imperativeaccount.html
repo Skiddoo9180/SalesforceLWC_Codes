@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="ACCOINTS">
+          <lightning-input type="number" label="no of record" onchange={changehandler}></lightning-input>
+        <p> 
+              <lightning-button label="submit" onclick={subdata}></lightning-button>
+        </p>
+          <ul>
+               <template for:each={accounts} for:item="account">
+                  <li key={account.id}>
+                      <div class="slds-p-around-medium">
+                          <lightning-tile label={account.name} type="media">
+                                <p class="slds-truncate" title={account.phone}>{account.phone}</p> 
+                      </div>
+                          </lightning-tile>
+                </li>
+        </ul>
+
+    </lightning-card>
+</template>

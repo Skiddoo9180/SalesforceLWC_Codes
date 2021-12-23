@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="num1" type="Integer" default="10000"/>
+    <aura:attribute name="num2" type="Integer" default="20000"/>
+    <aura:attribute name="calc" type="Integer"/>
+    <lightning:button label="ADD" class="slds-button slds-button_success" onclick="{!c.show}"/>
+    {!v.num1} + {!v.num2}={!v.calc}
+    <c:chaincomp></c:chaincomp>
+</aura:component>

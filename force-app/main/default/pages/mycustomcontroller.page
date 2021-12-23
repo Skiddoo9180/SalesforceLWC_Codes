@@ -1,0 +1,6 @@
+<apex:page controller="mycustomcontroller" >
+    <apex:pageblock title="hello {!$User.FirstName}">
+        This is your page for the {!name}controller <br/>
+        You are viewing {!position.name} position
+    </apex:pageblock>
+</apex:page>

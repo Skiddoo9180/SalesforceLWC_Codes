@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+<aura:attribute name="msgvar" type="string"/>
+
+<lightning:card title="AURA CO-EXISTENCE">
+
+   <div class="slds-p-around_medium">
+        <div>
+            
+            {!v.msgvar}
+
+        </div> 
+    </div>
+
+
+   <div class="slds-p-around_medium">
+
+    <c:lwcAuraCommunication title="Hellow from Aura" onaurashow="{!c.auramsg}"></c:lwcAuraCommunication>
+
+   </div>
+    
+
+</lightning:card>
+
+</aura:component>	
+

@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title={cardtitle}>
+        <lightning-input type="number" step="0.01" label="Height" onchange={changehandler}></lightning-input>
+        <lightning-input type="number" step="0.01" label="weight" onchange={changehandler}></lightning-input>
+        <lightning-button label="Get BMI" value={bmicalc}></lightning-button>
+        <p> the calculated BMI is {bmi}</p>
+    </lightning-card>
+    </template>

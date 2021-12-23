@@ -1,0 +1,17 @@
+<template>
+    <ul>
+    <template for:each={meetingroom} for:item="room">
+        <li key={room.roomname}>
+         <!--- <c-myroom1 meetingroominfo={room} showroom></c-myroom1> -->
+         <c-myroom1 showroom>
+         <div class="slds-p-around_medium lgc-bg">
+            <lightning-tile label={room.roomname} href="/path/to/somewhere">
+                <p class="slds-truncate" title={room.roomno}>room capacity: {room.roomno}</p>
+            </lightning-tile>
+        </div>
+        <div>THis is a additional markup ,please ignore</div>
+    </c-myroom1>
+        </li>
+    </template>
+</ul>
+</template>

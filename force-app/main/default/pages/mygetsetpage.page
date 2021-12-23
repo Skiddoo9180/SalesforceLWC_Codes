@@ -1,0 +1,11 @@
+<apex:page controller="mygetsetclass">
+    <apex:form >
+    <apex:outputlabel >enter name</apex:outputlabel>
+        <apex:inputtext value="{!name}"/>
+    <apex:commandButton value="click" rerender="one"/>
+    <div>
+        
+        <apex:outputlabel id="one"> hello your name is {!name} </apex:outputlabel>
+        </div>
+    </apex:form>
+</apex:page>

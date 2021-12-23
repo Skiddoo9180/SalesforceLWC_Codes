@@ -1,0 +1,11 @@
+<apex:page controller="insert_position">
+     <apex:form >
+    <apex:pageblock title="welcome my friend!!">
+    <apex:pageblocksection title="This is a data entry page" columns="2">
+    <apex:inputfield value="{!psn.name}" ></apex:inputfield> 
+    <apex:inputfield value="{!psn.Salary__c}"></apex:inputfield>
+        <apex:commandbutton value="save record" action="{!saverec}"/>
+        </apex:pageblocksection>
+    </apex:pageblock>
+   </apex:form> 
+</apex:page>

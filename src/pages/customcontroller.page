@@ -1,0 +1,9 @@
+<apex:page standardcontroller="candidate__c">
+    <apex:pageblock title="candidate Summary">
+        <apex:pageblocksection >
+            Name:{!candidate__c.name} <br/>
+            <!--Phone:{!account.Phone} <br/>
+            Industry:{!account.Industry} <br/>        -->    
+        </apex:pageblocksection>
+    </apex:pageblock>
+</apex:page>

@@ -1,0 +1,40 @@
+<template>
+
+    <lightning-card title="Form Factor">
+        <div class="slds-p-around_medium">
+            {formFactor}
+        </div>
+    </lightning-card>
+    
+    <lightning-card title="User Information">
+        <div class="slds-p-around_medium">
+                <p>User Id-> {userId}</p>
+                <p>Is it a Guest login?-> {isGuest}</p>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="User Permissions">
+        <div class="slds-p-around_medium">
+            <template if:true={manageleads}>
+                <p>You have the permission</p>
+            </template>
+
+            <template if:false={manageleads}>
+                <p>You don't have the permission, contact system admin</p>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Custom Permissions">
+        <div class="slds-p-around_medium">
+            <template if:true={custompermission}>
+                <p>You have the custom permission</p>
+            </template>
+
+            <template if:false={custompermission}>
+                <p>You don't have the custom permission, contact system admin</p>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="getObjectInfo Demo using Function">
+        <div> Default Record Id = {recordId}</div>
+    </lightning-card>
+
+    <template if:true={recordIdProperty.data}>
+        <lightning-card title="getObjectInfo Demo using Property">
+            <div> Default Record Id = {recordIdProperty.data.defaultRecordTypeId}</div>
+        </lightning-card>
+    </template>
+    
+    <lightning-card title="getObjectInfos Demo using Function">
+    <template if:true={objectInfos}>
+            <template for:each={objectInfos.results} for:item="obj">
+                <div key={obj.result.apiName}>
+                    <div> Object Api Name: {obj.result.apiName} </div>
+                    <div>defaultRecordTypeId : {obj.result.defaultRecordTypeId}</div>
+                </div>
+            </template> 
+    </template>
+</lightning-card>
+
+</template>

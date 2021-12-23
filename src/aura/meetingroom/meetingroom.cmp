@@ -1,0 +1,21 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="meetingroom" type="List"></aura:attribute>
+    <aura:attribute name="selectedroomss" type="string"></aura:attribute>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card title="My meeting rooms">
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <ul>
+                    <aura:iteration items="{!v.meetingroom}" var="item">
+                        <li style="padding:10px">
+                            <c:myroom3 meetingroominfo="{#item}" showroom ="true" ontileclick="{!c.handleTileClick}"></c:myroom3>
+                        </li>
+                    </aura:iteration>
+                </ul>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="8" padding="around-small">
+                you have selected: {!v.selectedroomss}
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

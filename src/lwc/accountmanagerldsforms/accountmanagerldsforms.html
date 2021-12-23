@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="My Account manager">
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+            <lightning-card title="Create Account">
+                <lightning-record-edit-form object-api-name="Account" onsuccess={successhandler}>
+                 <p><lightning-input-field field-name="Name"></lightning-input-field></p>  
+                 <p><lightning-input-field field-name="Phone"></lightning-input-field></p> 
+                 <p><lightning-input-field field-name="Website"></lightning-input-field></p>
+                 <p><lightning-button type="submit" name="save" label="create account"></lightning-button></p>
+                </lightning-record-edit-form>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+        <lightning-card title="View forms"></lightning-card>
+        <lightning-record-view-form record-id={recordid} object-api-name="Account">
+           <p> <lightning-output-field field-name="Name"></lightning-output-field></p>
+           <p><lightning-output-field field-name="Phone"></lightning-output-field></p>
+           <p><lightning-output-field field-name="Website"></lightning-output-field></p>
+        </lightning-record-view-form>
+    </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

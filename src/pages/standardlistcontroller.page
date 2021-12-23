@@ -1,0 +1,11 @@
+<apex:page standardcontroller="Position__c" recordsetvar="positions">
+    <apex:pageblock >
+    <apex:pageblocksection >
+        <apex:pageblocktable value="{!positions}" var="p">
+        <apex:column value="{!p.name}"/>
+        <apex:column value="{!p.Salary__c}"/>
+            </apex:pageblocktable>
+       </apex:pageblocksection>
+        
+        </apex:pageblock>
+</apex:page>
