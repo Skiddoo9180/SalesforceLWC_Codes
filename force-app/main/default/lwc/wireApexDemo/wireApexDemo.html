@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="Wire Apex Demo using Property">
+        <div class="slds-p-around_medium">
+            <template if:true={accountlist.data}>
+                <template for:each={accountlist.data} for:item="account">
+                    <div class="slds-box slds-box_xx-small" key={account.Id}>
+                        <p><strong>Id:-</strong>{account.Id}</p>
+                        <p><strong>Name:-</strong>{account.Name}</p>
+                        <p><strong>Type:-</strong>{account.Type}</p>
+                        <p><strong>Industry:-</strong>{account.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Wire Apex Demo using Function">
+        <div class="slds-p-around_medium">
+            <template if:true={accLists}>
+                <template for:each={accLists} for:item="acc">
+                    <div class="slds-box slds-box_xx-small" key={acc.Id}>
+                        <p><strong>Id:-</strong>{acc.Id}</p>
+                        <!-- <p><strong>Name:-</strong>{acc.newName}</p> -->
+                        <p><strong>Name:-</strong>{acc.Name}</p>
+                        <p><strong>Type:-</strong>{acc.Type}</p>
+                        <p><strong>Industry:-</strong>{acc.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="Wire Apex Demo using Function2">
+        <div class="slds-p-around_medium">
+            <template if:true={accList}>
+                <template for:each={accList} for:item="acc">
+                    <div class="slds-box slds-box_xx-small" key={acc.Id}>
+                        <p><strong>Id:-</strong>{acc.Id}</p>
+                        <p><strong>Name:-</strong>{acc.newName}</p>
+                        <p><strong>Name:-</strong>{acc.Name}</p>
+                        <p><strong>Type:-</strong>{acc.Type}</p>
+                        <p><strong>Industry:-</strong>{acc.Industry}</p>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
