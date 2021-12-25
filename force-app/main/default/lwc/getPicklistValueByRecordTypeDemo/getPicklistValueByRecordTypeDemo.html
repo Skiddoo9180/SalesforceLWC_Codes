@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Industry picklist from Record Id">
+        <template if:true={industryOptions}>
+            <lightning-combobox
+                name="Industry"
+                label="Industry"
+                value={selectedIndustry}
+                placeholder="Select Industry"
+                options={industryOptions}
+                onchange={changeHandler}
+            >
+            </lightning-combobox>
+        </template>
+    </lightning-card>
+    <lightning-card title="ShippingGeocodeAccuracy picklist from Record Id">
+        <template if:true={geoCodeOptions}>
+            <lightning-combobox
+                name="ShippingGeocodeAccuracy"
+                label="ShippingGeocodeAccuracy"
+                value={selectedGeoCode}
+                placeholder="Select ShippingGeocode"
+                options={geoCodeOptions}
+                onchange={changeHandler}
+            >
+            </lightning-combobox>
+        </template>
+    </lightning-card>
+</template>
